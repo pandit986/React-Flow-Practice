@@ -9,7 +9,13 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { initialEdges, initialNodes } from "./helper";
+import PaymentInit from "./components/PaymentInit";
+import PaymentCountry from "./components/PaymentCountry";
 
+const nodesType = {
+  'paymentInit' : PaymentInit,
+  'paymentCountry' : PaymentCountry
+}
 const PaymentGateWorkFlow = () => {
 
   // Manage nodes and edges state
@@ -33,6 +39,7 @@ const PaymentGateWorkFlow = () => {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodesType}
       >
         <MiniMap />
         <Controls />
