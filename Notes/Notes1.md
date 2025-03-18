@@ -54,7 +54,7 @@ Handles are small circles on nodes where edges can be attached. They allow nodes
 React Flow provides some helpful UI tools:  
 - **MiniMap** → Shows a small preview of the full diagram.  
 - **Controls** → Buttons for zooming in, zooming out, and resetting the view.  
-- **Background** → Adds a grid behind the diagram for better alignment.  
+- **Background** → Adds a grid behind the diagram for better alignment.The <Background /> component makes it convenient to render different types of backgrounds common in node-based UIs. It comes with three variants: lines, dots and cross.
 
 ---
 
