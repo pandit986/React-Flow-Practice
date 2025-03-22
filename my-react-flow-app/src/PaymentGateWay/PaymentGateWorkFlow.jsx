@@ -11,10 +11,14 @@ import "reactflow/dist/style.css";
 import { initialEdges, initialNodes } from "./helper";
 import PaymentInit from "./components/PaymentInit";
 import PaymentCountry from "./components/PaymentCountry";
+import PaymentProvider from './components/PaymentProvider'
+import PaymentProviderSelect from "./components/PaymentProviderSelect";
 
 const nodesType = {
   'paymentInit' : PaymentInit,
-  'paymentCountry' : PaymentCountry
+  'paymentCountry' : PaymentCountry,
+  'PaymentProvider' : PaymentProvider,
+  'paymentProviderSelect':PaymentProviderSelect
 }
 const PaymentGateWorkFlow = () => {
 
@@ -25,10 +29,12 @@ const PaymentGateWorkFlow = () => {
   
   const onConnect = (connection) => {
     console.log(connection);
-    let newEdges = { ...connection, animation: true, id: `e${edges.length + 1}`, style: { stroke: "orange", strokeWidth: 2 },};
+    let newEdges = { ...connection, id: `e${edges.length + 1}`, type:"smoothstep", animated: true , style: { stroke: "orange", strokeWidth: 2 },};
     // 'addEdge' helps add the new connection into the existing edges state.
+    console.log(newEdges,"newEdges")
     setEdges((prevEdges) => addEdge(newEdges, prevEdges));
   };
+
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
