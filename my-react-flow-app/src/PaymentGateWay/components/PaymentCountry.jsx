@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaFlag } from "react-icons/fa"; 
 import { Handle, Position } from "reactflow";
+import CustomHandle from "./CustomHandle";
 
 const Container = styled.div`
   display: flex;
@@ -47,8 +48,8 @@ export default function PaymentCountry({ data }) {
         <CountryName>{country}</CountryName>
         <Currency>{currency}</Currency>
       </CountryInfo>
-      <Handle type="source" position={Position.Right} />
-      <Handle type="target" position={Position.Left} />
+      <CustomHandle type="source" position={Position.Right} />
+      <CustomHandle type="target" position={Position.Left} />
     </Container>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Handle, Position, useReactFlow } from "reactflow";
+import CustomHandle from "./CustomHandle";
 // import CustomHandle from "./CustomHandle";
 
 const PAYMENT_PROVIDER_IMAGE_MAP = {
@@ -23,7 +24,7 @@ export default function PaymentProvider({ data, id }) {
       <DeleteButton onClick={() => setNodes((prevNodes) => prevNodes.filter((node) => node.id !== id))}>
         X
       </DeleteButton>
-      <Handle type="target" position={Position.Left} />
+      <CustomHandle type="target" position={Position.Left} />
     </Container>
   );
 }

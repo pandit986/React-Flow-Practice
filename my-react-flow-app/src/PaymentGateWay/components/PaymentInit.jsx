@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Handle, Position } from "reactflow";
 import { BsCreditCard } from "react-icons/bs";
+import CustomHandle from "./CustomHandle";
 // import CustomHandle from "./CustomHandle";
 
 const Card = styled.div`
@@ -39,7 +40,7 @@ export default function PaymentInit({ data }) {
       <CardBody>
         <AmountText>${data.amount}</AmountText>
       </CardBody>
-      <Handle type="source" position={Position.Right} />
+      <CustomHandle type="source" position={Position.Right} />
       {/* source mean start and i used target used */}
     </Card>
   );
